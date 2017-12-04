@@ -1,0 +1,46 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    working_directory: ~/hello-world-ci
+
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:6.10
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - dependencies-cache-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - dependencies-cache
+
+      - run:
+          name: Install Serverless CLI
+          command: |
+            yarn install
+            sudo npm i -g serverless
+
+      # run tests
+      - run: 
+          name: Run tests
+          command: yarn test
+
+      # deploy app            
+      - run:
+          name: Deploy application 
+          command: |
+            # deploy
+            sls deploy
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependencies-cache-{{ checksum "package.json" }}
+        

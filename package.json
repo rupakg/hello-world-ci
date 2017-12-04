@@ -1,0 +1,23 @@
+{
+  "name": "hello-world-ci",
+  "version": "1.0.0",
+  "description": "Hello World serverless app with tests",
+  "main": "handler.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": ["json", "lcov", "html", "text"]
+  },
+  "author": "Rupak Ganguly",
+  "license": "MIT"
+}
