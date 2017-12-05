@@ -1,6 +1,6 @@
-# Hello World App with Tests
+# Hello World with CI/CD
 
-A serverless hello world app with tests.
+A serverless hello world app built by CI/CD process.
 
 ## Install Jest
 
