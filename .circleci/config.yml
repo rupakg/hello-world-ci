@@ -22,22 +22,20 @@ jobs:
             - dependencies-cache
 
       - run:
-          name: Install Serverless CLI
+          name: Install Serverless CLI and dependencies
           command: |
-            yarn install
             sudo npm i -g serverless
+            npm install
 
       # run tests
       - run: 
-          name: Run tests
-          command: yarn test
+          name: Run tests with code coverage
+          command: npm test --covarage
 
       # deploy app            
       - run:
           name: Deploy application 
-          command: |
-            # deploy
-            sls deploy
+          command: sls deploy
 
       - save_cache:
           paths:
