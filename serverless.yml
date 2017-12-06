@@ -7,6 +7,12 @@
 # The `service` block is the name of the service
 service: hello-world-cd
 
+# exclude the code coverage files and circle ci files
+package:
+  exclude:
+  - coverage/**
+  - .circleci/**
+
 # The `provider` block defines where your service will be deployed
 provider:
   name: aws
