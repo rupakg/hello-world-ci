@@ -30,7 +30,7 @@ jobs:
       # run tests
       - run: 
           name: Run tests with code coverage
-          command: npm test --covarage
+          command: npm test --coverage
 
       # deploy app            
       - run:
