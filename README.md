@@ -1,8 +1,8 @@
 # Hello World with CI/CD
 
-A serverless hello world app built by CI/CD process.
+A serverless NodeJS app using CI with CircleCI.
 
-[![CircleCI](https://circleci.com/gh/rupakg/hello-world-ci/tree/master.svg?style=svg)](https://circleci.com/gh/rupakg/hello-world-ci/tree/master)
+![](https://circleci.com/gh/rupakg/hello-world-ci.svg?style=shield&circle-token=:circle-token)
 
 ## Install Jest
 
