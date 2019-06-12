@@ -16,7 +16,12 @@
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": ["json", "lcov", "html", "text"]
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "html",
+      "text"
+    ]
   },
   "author": "Rupak Ganguly",
   "license": "MIT"

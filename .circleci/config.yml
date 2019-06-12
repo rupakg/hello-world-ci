@@ -9,7 +9,7 @@ jobs:
 
     docker:
       # specify the version you desire here
-      - image: circleci/node:6.10
+      - image: circleci/node:8.10
 
     steps:
       - checkout
@@ -28,17 +28,17 @@ jobs:
             npm install
 
       # run tests
-      - run: 
+      - run:
           name: Run tests with code coverage
           command: npm test --coverage
 
-      # deploy app            
+      # deploy app
       - run:
-          name: Deploy application 
+          name: Deploy application
           command: sls deploy -v
 
       - save_cache:
           paths:
             - node_modules
           key: dependencies-cache-{{ checksum "package.json" }}
-        
+
