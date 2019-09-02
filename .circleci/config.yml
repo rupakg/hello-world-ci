@@ -3,13 +3,16 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
+orbs:
+  aws-cli: circleci/aws-cli@0.1.15
+
 jobs:
   build:
     working_directory: ~/hello-world-ci
 
     docker:
       # specify the version you desire here
-      - image: circleci/node:10.x
+      - image: circleci/node:10.*
 
     steps:
       - checkout
