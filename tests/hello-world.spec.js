@@ -22,7 +22,7 @@ describe('sayHello', () => {
     var hWorld = new HelloWorld();
     it('should call sayHello and return message', () => {
         expect(hWorld.sayHello({}).message)
-            .toBe('Go Serverless v1.0! Your function executed successfully!');
+            .toBe('dame tequeños');
     });
 });
 
