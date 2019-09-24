@@ -35,11 +35,6 @@ jobs:
           name: Run tests with code coverage
           command: npm test --coverage
 
-      # deploy app
-      - run:
-          name: Deploy application
-          command: sls deploy -v
-
       - save_cache:
           paths:
             - node_modules
