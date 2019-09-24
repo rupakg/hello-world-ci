@@ -22,7 +22,7 @@ describe('sayHello', () => {
     var hWorld = new HelloWorld();
     it('should call sayHello and return message', () => {
         expect(hWorld.sayHello({}).message)
-            .toBe('dame tequeños');
+            .toBe('Oh! hello there captain Grievous');
     });
 });
 

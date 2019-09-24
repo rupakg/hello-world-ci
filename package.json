@@ -9,7 +9,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "jest": "^21.2.1"
+    "jest": "^21.2.1",
+    "serverless-offline": "^5.11.0"
   },
   "scripts": {
     "test": "jest"
